@@ -12,9 +12,6 @@ function juntaListas(lista1, lista2) {
   ) {
     let produtoAtualLista1 = lista1[posicaoAtualLista1];
     let produtoAtualLista2 = lista2[posicaoAtualLista2];
-    // console.log(
-    //   `Comparando ${produtoAtualLista1.titulo} com ${produtoAtualLista2.titulo} `
-    // );
 
     if (produtoAtualLista1.preco < produtoAtualLista2.preco) {
       listaFinal[atual] = produtoAtualLista1;
