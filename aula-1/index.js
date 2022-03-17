@@ -1,4 +1,4 @@
-const { edGalho, edFolha } = require('./arrays');
+const { edGalho, edFolha } = require("./arrays");
 
 function juntaListas(lista1, lista2) {
   let listaFinal = [];
@@ -6,9 +6,15 @@ function juntaListas(lista1, lista2) {
   let posicaoAtualLista2 = 0;
   let atual = 0;
 
-  while (posicaoAtualLista1 < lista1.length && posicaoAtualLista2 < lista2.length) {
+  while (
+    posicaoAtualLista1 < lista1.length &&
+    posicaoAtualLista2 < lista2.length
+  ) {
     let produtoAtualLista1 = lista1[posicaoAtualLista1];
     let produtoAtualLista2 = lista2[posicaoAtualLista2];
+    // console.log(
+    //   `Comparando ${produtoAtualLista1.titulo} com ${produtoAtualLista2.titulo} `
+    // );
 
     if (produtoAtualLista1.preco < produtoAtualLista2.preco) {
       listaFinal[atual] = produtoAtualLista1;
@@ -17,7 +23,6 @@ function juntaListas(lista1, lista2) {
       listaFinal[atual] = produtoAtualLista2;
       posicaoAtualLista2++;
     }
-
     atual++;
   }
 
@@ -32,8 +37,7 @@ function juntaListas(lista1, lista2) {
     posicaoAtualLista2++;
     atual++;
   }
-
   return listaFinal;
 }
 
-console.log(juntaListas(edGalho, edFolha))
+console.log(juntaListas(edGalho, edFolha));
